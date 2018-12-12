@@ -7,7 +7,7 @@
 
 <p>
   <strong>Price:</strong>
-  <%= @product.price %>
+  <%= money(@product.price) %>
 </p>
 
 <p>
@@ -28,11 +28,6 @@
 <p>
   <strong>Rating:</strong>
   <%= @product.rating %>
-</p>
-
-<p>
-  <strong>Integer:</strong>
-  <%= @product.integer %>
 </p>
 
 <p>

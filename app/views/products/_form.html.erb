@@ -11,44 +11,38 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :name %>
-    <%= form.text_field :name, id: :product_name %>
+    <%= form.text_field :name, id: :product_name, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
+    <strong>Upload Product Image</strong>
+    <%= form.file_field :image %>
+  </div>
+
+  <div class="form-group">
     <%= form.label :price %>
-    <%= form.number_field :price, id: :product_price %>
+    <%= form.number_field :price, id: :product_price, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :quantity %>
-    <%= form.number_field :quantity, id: :product_quantity %>
+    <%= form.number_field :quantity, id: :product_quantity, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :description %>
-    <%= form.text_area :description, id: :product_description %>
+    <%= form.text_area :description, id: :product_description, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :brand %>
-    <%= form.text_field :brand, id: :product_brand %>
+    <%= form.text_field :brand, id: :product_brand, class:"form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :rating %>
-    <%= form.text_field :rating, id: :product_rating %>
-  </div>
-
-  <div class="field">
-    <%= form.label :integer %>
-    <%= form.text_field :integer, id: :product_integer %>
-  </div>
-
-  <div class="field">
-    <%= form.label :category_id %>
-    <%= form.number_field :category_id, id: :product_category_id %>
+  <div class="form-group">
+    <%= form.select :category_id, @categories.collect {|c| [c.name, c.id]}, {include_blank: "Please select a category"} %>
   </div>
 
   <div class="actions">
