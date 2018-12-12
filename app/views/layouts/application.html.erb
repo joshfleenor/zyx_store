@@ -46,6 +46,8 @@
 
         </ul>
         <ul class="nav navbar-nav navbar-right">
+          <li><a href=""><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+          <li><a href=""><%= LineItem.count %> Items in Cart</a></li>
           <li><%= link_to "View Cart", view_order_path %></li>
           <% if user_signed_in? %>
             <li class="dropdown">

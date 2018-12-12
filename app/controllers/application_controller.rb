@@ -11,4 +11,8 @@ class ApplicationController < ActionController::Base
   	@brands = Product.pluck(:brand).uniq.sort
   end
 
+  def view_order
+  	@line_items = LineItem.all
+  end
+
 end
